@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{C8EE3843-6730-4783-83E3-E6428C405A26}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OnyxEngine", "OnyxEngine\OnyxEngine.vcxproj", "{A7BBF0E2-C8CD-49ED-ACA0-CD2658A1EF0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7BBF0E2-C8CD-49ED-ACA0-CD2658A1EF0F}.Debug|x64.ActiveCfg = Debug|x64
+		{A7BBF0E2-C8CD-49ED-ACA0-CD2658A1EF0F}.Debug|x64.Build.0 = Debug|x64
+		{A7BBF0E2-C8CD-49ED-ACA0-CD2658A1EF0F}.Release|x64.ActiveCfg = Release|x64
+		{A7BBF0E2-C8CD-49ED-ACA0-CD2658A1EF0F}.Release|x64.Build.0 = Release|x64
+		{C8EE3843-6730-4783-83E3-E6428C405A26}.Debug|x64.ActiveCfg = Debug|x64
+		{C8EE3843-6730-4783-83E3-E6428C405A26}.Debug|x64.Build.0 = Debug|x64
+		{C8EE3843-6730-4783-83E3-E6428C405A26}.Release|x64.ActiveCfg = Release|x64
+		{C8EE3843-6730-4783-83E3-E6428C405A26}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A892334-1CF2-43E4-9A99-430EF85AFFA3}
+	EndGlobalSection
+EndGlobal
