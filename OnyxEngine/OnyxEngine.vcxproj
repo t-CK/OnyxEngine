@@ -153,6 +153,10 @@
     <ClInclude Include="src\Onyx\Application.h" />
     <ClInclude Include="src\Onyx\Core.h" />
     <ClInclude Include="src\Onyx\EntryPoint.h" />
+    <ClInclude Include="src\Onyx\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Onyx\Events\Event.h" />
+    <ClInclude Include="src\Onyx\Events\KeyEvent.h" />
+    <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
     <ClInclude Include="src\Onyx\Log.h" />
     <ClInclude Include="src\OnyxPch.h" />
   </ItemGroup>
