@@ -1,4 +1,8 @@
+// pch
+#include "OnyxPch.h"
+
 #include "Application.h"
+
 
 namespace Onyx
 {

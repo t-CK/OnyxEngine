@@ -19,6 +19,7 @@
     <ClInclude Include="src\Onyx\Log.h">
       <Filter>Onyx</Filter>
     </ClInclude>
+    <ClInclude Include="src\OnyxPch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
@@ -27,5 +28,6 @@
     <ClCompile Include="src\Onyx\Log.cpp">
       <Filter>Onyx</Filter>
     </ClCompile>
+    <ClCompile Include="src\OnyxPch.cpp" />
   </ItemGroup>
 </Project>

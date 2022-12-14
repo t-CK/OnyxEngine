@@ -1,11 +1,9 @@
-
+// pch
+#include "OnyxPch.h"
 // Onyx engine
 #include "Log.h"
 // Vendors
 #include <spdlog/sinks/stdout_color_sinks.h>
-// Standard c++
-#include <string>
-#include <sstream>
 
 namespace Onyx
 {

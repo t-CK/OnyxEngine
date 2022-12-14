@@ -12,10 +12,7 @@ configurations
 outputdir = "%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}"
 
 IncludeDir = {}
---IncludeDir["GLFW"] = "OnyxEngine/vendor/GLFW/include"
---IncludeDir["imgui"] = "OnyxEngine/vendor/imgui"
 IncludeDir["spdlog"] = "OnyxEngine/vendor/spdlog/include"
---IncludeDir["glad"] = "OnyxEngine/vendor/glad/include"
 
 --include "OnyxEngine/vendor/GLFW"
 --include "OnyxEngine/vendor/glad"
@@ -29,8 +26,8 @@ project "OnyxEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	--pchheader "OnyxPch.h"
-	--pchsource "OnyxEngine/src/OnyxPch.cpp"
+	pchheader "OnyxPch.h"
+	pchsource "OnyxEngine/src/OnyxPch.cpp"
 
 	files
 	{
@@ -42,9 +39,6 @@ project "OnyxEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
-	--	"%{prj.name}/vendor/GLFW/include",
-	--	"%{prj.name}/vendor/glad/include",
-	--	"%{prj.name}/vendor/ImGui"
 	}
 	
 	--libdirs
