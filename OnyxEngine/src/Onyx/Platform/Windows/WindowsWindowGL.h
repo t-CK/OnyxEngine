@@ -18,15 +18,15 @@ namespace Onyx
 
 		////////////////// Window size getters ////////////////////////
 
-		inline unsigned int GetWidth() const override { return m_Data.m_Width; }
-		inline unsigned int GetHeight() const override { return m_Data.m_Height; }
+		inline unsigned int GetWidth() const override { return m_Data.Width; }
+		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
-		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.m_EventCallback = callback; }
+		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 
 		///////////////////// V-sync /////////////////////////////////
 
 		void SetVSync(bool enabled) override;
-		inline bool IsVSync() const override { return m_Data.m_VSync; }
+		inline bool IsVSync() const override { return m_Data.VSync; }
 		/////////////////////////////////////////////////////////////
 
 		inline void* GetNativeWindow() const override { return (void*)m_Window; }
@@ -43,10 +43,10 @@ namespace Onyx
 
 		struct WindowData
 		{
-			std::string m_Title; unsigned int m_Width, m_Height;
-			bool m_VSync;
+			std::string Title; unsigned int Width, Height;
+			bool VSync;
 
-			EventCallbackFn m_EventCallback;
+			EventCallbackFn EventCallback;
 		};
 		WindowData m_Data;
 	};

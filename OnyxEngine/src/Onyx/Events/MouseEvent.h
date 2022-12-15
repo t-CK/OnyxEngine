@@ -31,6 +31,7 @@ namespace Onyx
 	class ONYX_API MouseScrolledEvent :
 		public Event
 	{
+	public:
 		MouseScrolledEvent(float offsetX, float offsetY) :
 			m_OffsetX(offsetX), m_OffsetY(offsetY) { }
 
@@ -61,6 +62,23 @@ namespace Onyx
 			m_Button(keycode) { }
 
 		int m_Button;
+	};
+
+	class ONYX_API MouseButtonPressedEvent :
+		public MouseButtonEvent
+	{
+	public:
+		MouseButtonPressedEvent(int button) :
+			MouseButtonEvent(button) { }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonPressedEvent: " << m_Button;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(MouseButtonPressed);
 	};
 
 	class ONYX_API MouseButtonReleasedEvent :

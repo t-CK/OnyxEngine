@@ -9,12 +9,12 @@ namespace Onyx
 {
 	struct WindowProps
 	{
-		std::string m_Title;
-		unsigned int m_Width;
-		unsigned int m_Height;
+		std::string Title;
+		unsigned int Width;
+		unsigned int Height;
 
 		WindowProps(const std::string& title = "Onyx Engine", unsigned int width = 1280, unsigned int height = 720) :
-			m_Title(title), m_Width(width), m_Height(height) { }
+			Title(title), Width(width), Height(height) { }
 	};
 
 	// Abstract Window class to be used as base class for all window classes

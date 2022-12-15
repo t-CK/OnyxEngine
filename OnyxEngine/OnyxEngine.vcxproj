@@ -90,7 +90,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Debug\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Debug\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>
@@ -118,7 +118,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Release\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Release\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>
@@ -146,7 +146,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Dist\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Dist\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>

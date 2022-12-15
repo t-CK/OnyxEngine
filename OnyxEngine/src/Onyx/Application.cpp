@@ -17,6 +17,8 @@ namespace Onyx
 		s_Application = this;
 
 		m_AppWindow = std::unique_ptr<Window>(Window::Create());
+		m_AppWindow->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
+		
 		Init();
 	}
 
@@ -31,23 +33,33 @@ namespace Onyx
 	{
 		EventDispatcher dispatcher(e);
 
-		if (e.GetEventType() == EventType::WindowClose)
-			m_IsRunning = false;
-
 		///////// DEBUG //////////
 		ONYX_CORE_TRACE("{0}", e);
 		//////////////////////////
 
+		if (e.GetEventType() == EventType::WindowClose)
+			dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClosed));
+
+
 	}
-	
+
 	void Application::Run()
 	{
 		while (m_IsRunning)
 		{
+			glClearColor(1, 0, 1, 0);
+			glClear(GL_COLOR_BUFFER_BIT);
 			m_AppWindow->OnUpdate();
 		}
 	}
 	
+	bool Application::OnWindowClosed(WindowCloseEvent)
+	{
+		m_IsRunning = false;
+		
+		return m_IsRunning;
+	}
+
 	Application::~Application()
 	{
 
