@@ -13,8 +13,9 @@ outputdir = "%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}"
 
 IncludeDir = {}
 IncludeDir["spdlog"] = "OnyxEngine/vendor/spdlog/include"
+IncludeDir["glfw"] = "OnyxEngine/vendor/glfw/include"
 
---include "OnyxEngine/vendor/GLFW"
+include "OnyxEngine/vendor/glfw"
 --include "OnyxEngine/vendor/glad"
 --include "OnyxEngine/vendor/ImGui"
 
@@ -38,23 +39,24 @@ project "OnyxEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/vendor/glfw/include"
 	}
 	
-	--libdirs
-	--{
-	--	"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/GLFW",
+	libdirs
+	{
+		"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/GLFW"
 	--	"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/glad",
 	--	"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/ImGui"
-	--}
+	}
 	
-	--links
-	--{
-	--	"GLFW.lib",
+	links
+	{
+		"GLFW.lib"
 	--	"opengl32.lib",
 	--	"Glad.lib",
 	--	"ImGui.lib"
-	--}
+	}
 
 	filter "system:windows"
 		cppdialect "C++20"

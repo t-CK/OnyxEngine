@@ -10,7 +10,6 @@ int main(int argc, char** argv)
 {
 	Onyx::Log::Init();
 	auto app = Onyx::CreateApplication();
-	
 	ONYX_INFO("Created Application");
 
 	app->Run();

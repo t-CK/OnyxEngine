@@ -1,0 +1,3 @@
+[submodule "OnyxEngine/vendor/glfw"]
+	path = OnyxEngine/vendor/glfw
+	url = https://github.com/t-CK/glfw

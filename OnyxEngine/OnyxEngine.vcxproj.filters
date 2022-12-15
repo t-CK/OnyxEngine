@@ -4,6 +4,9 @@
     <Filter Include="Onyx">
       <UniqueIdentifier>{73458A7C-5F7C-8B0D-0869-7110F47E070F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Onyx\Events">
+      <UniqueIdentifier>{F7F1B268-63A7-2B5E-EC9B-253558502262}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Onyx.h" />
@@ -16,14 +19,24 @@
     <ClInclude Include="src\Onyx\EntryPoint.h">
       <Filter>Onyx</Filter>
     </ClInclude>
+    <ClInclude Include="src\Onyx\Events\ApplicationEvent.h">
+      <Filter>Onyx\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Onyx\Events\Event.h">
+      <Filter>Onyx\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Onyx\Events\KeyEvent.h">
+      <Filter>Onyx\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Onyx\Events\MouseEvent.h">
+      <Filter>Onyx\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Onyx\Log.h">
       <Filter>Onyx</Filter>
     </ClInclude>
     <ClInclude Include="src\OnyxPch.h" />
-    <ClInclude Include="src\Onyx\Events\Event.h" />
-    <ClInclude Include="src\Onyx\Events\KeyEvent.h" />
-    <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
-    <ClInclude Include="src\Onyx\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Onyx\Window.h" />
+    <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
@@ -33,5 +46,6 @@
       <Filter>Onyx</Filter>
     </ClCompile>
     <ClCompile Include="src\OnyxPch.cpp" />
+    <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp" />
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 #include "OnyxPch.h"
 // Onyx engine
 #include "Log.h"
-// Vendors
+// Vendor
 #include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace Onyx
