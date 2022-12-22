@@ -32,15 +32,34 @@ namespace Onyx
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
-
+		
 		///////// DEBUG //////////
 		ONYX_CORE_TRACE("{0}", e);
 		//////////////////////////
+
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+		{
+			(*--it)->OnEvent(e);
+			if (e.GetHandeled())
+				break;
+		}
 
 		if (e.GetEventType() == EventType::WindowClose)
 			dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClosed));
 
 
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.OnLayerInsert(layer);
+		layer->OnAttach();
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.OnOverlayPush(overlay);
+		overlay->OnAttach();
 	}
 
 	void Application::Run()
@@ -49,6 +68,10 @@ namespace Onyx
 		{
 			glClearColor(1, 0, 1, 0);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+
 			m_AppWindow->OnUpdate();
 		}
 	}
