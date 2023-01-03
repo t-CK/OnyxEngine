@@ -14,9 +14,10 @@ outputdir = "%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}"
 IncludeDir = {}
 IncludeDir["spdlog"] = "OnyxEngine/vendor/spdlog/include"
 IncludeDir["glfw"] = "OnyxEngine/vendor/glfw/include"
+IncludeDir["glad"] = "OnyxEngine/vendor/Glad/include"
 
 include "OnyxEngine/vendor/glfw"
---include "OnyxEngine/vendor/glad"
+include "OnyxEngine/vendor/glad"
 --include "OnyxEngine/vendor/ImGui"
 
 project "OnyxEngine"
@@ -40,21 +41,22 @@ project "OnyxEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/vendor/glfw/include"
+		"%{prj.name}/vendor/glfw/include",
+        "%{prj.name}/vendor/glad/include"
 	}
 	
 	libdirs
 	{
-		"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/GLFW"
-	--	"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/glad",
+		"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/GLFW",
+		"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/glad",
 	--	"$(SolutionDir)OnyxEngine/vendor/lib/%{cfg.system}-%{cfg.architecture}-%{cfg.buildcfg}/ImGui"
 	}
 	
 	links
 	{
-		"GLFW.lib"
-	--	"opengl32.lib",
-	--	"Glad.lib",
+		"GLFW.lib",
+		"opengl32.lib",
+		"Glad.lib",
 	--	"ImGui.lib"
 	}
 
@@ -66,7 +68,8 @@ project "OnyxEngine"
 		defines
 		{
 			"ONYX_PLATFORM_WINDOWS",
-			"ONYX_BUILD_DLL"
+			"ONYX_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -76,14 +79,17 @@ project "OnyxEngine"
 
 	filter "configurations:Debug"
 		defines "ONYX_DEBUG"
+        buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ONYX_RELEASE"
+        buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ONYX_DIST"
+        buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -123,12 +129,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "ONYX_DEBUG"
+        buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ONYX_RELEASE"
+        buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ONYX_DIST"
+        buildoptions "/MD"
 		optimize "On" 

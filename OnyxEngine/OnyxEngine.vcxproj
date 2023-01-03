@@ -79,19 +79,20 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>OnyxPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;ONYX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;GLFW_INCLUDE_NONE;ONYX_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Debug\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;Glad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Debug\GLFW;$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Debug\glad;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Debug\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -103,14 +104,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>OnyxPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;ONYX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;GLFW_INCLUDE_NONE;ONYX_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -118,8 +120,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Release\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;Glad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Release\GLFW;$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Release\glad;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Release\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -131,14 +133,15 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>OnyxPch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;ONYX_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ONYX_PLATFORM_WINDOWS;ONYX_BUILD_DLL;GLFW_INCLUDE_NONE;ONYX_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\glfw\include;vendor\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -146,8 +149,8 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>GLFW.lib;%(AdditionalDependencies)opengl32.lib;</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Dist\GLFW;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;Glad.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Dist\GLFW;$(SolutionDir)OnyxEngine\vendor\lib\windows-x86_64-Dist\glad;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>..\bin\windows-x86_64-Dist\OnyxEngine\OnyxEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -163,23 +166,22 @@
     <ClInclude Include="src\Onyx\Events\Event.h" />
     <ClInclude Include="src\Onyx\Events\KeyEvent.h" />
     <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
+    <ClInclude Include="src\Onyx\Layer.h" />
+    <ClInclude Include="src\Onyx\LayerStack.h" />
     <ClInclude Include="src\Onyx\Log.h" />
-    <ClInclude Include="src\OnyxPch.h" />
     <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h" />
     <ClInclude Include="src\Onyx\Window.h" />
+    <ClInclude Include="src\OnyxPch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp" />
+    <ClCompile Include="src\Onyx\Layer.cpp" />
+    <ClCompile Include="src\Onyx\LayerStack.cpp" />
     <ClCompile Include="src\Onyx\Log.cpp" />
+    <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp" />
     <ClCompile Include="src\OnyxPch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="vendor\glfw\GLFW.vcxproj">
-      <Project>{154b857c-0182-860d-aa6e-6c109684020f}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

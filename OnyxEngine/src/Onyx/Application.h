@@ -6,6 +6,7 @@
 #include "Events/MouseEvent.h"
 #include "Events/ApplicationEvent.h"
 #include "Window.h"
+#include "LayerStack.h"
 
 namespace Onyx
 {
@@ -17,6 +18,9 @@ namespace Onyx
 		void Init();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
 
 		void Run();
 
@@ -30,6 +34,7 @@ namespace Onyx
 	private:
 		std::unique_ptr<Window> m_AppWindow;
 		static Application* s_Application;
+		LayerStack m_LayerStack;
 
 	// Class variables
 	private:

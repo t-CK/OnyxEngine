@@ -2,9 +2,8 @@
 
 // Onyx Engine
 #include "Onyx/Window.h"
-// Vendors
+// Vendor
 #include <GLFW/glfw3.h>
-
 
 namespace Onyx
 {

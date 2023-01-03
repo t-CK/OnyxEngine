@@ -8,6 +8,8 @@
 #include "Onyx/Events/KeyEvent.h"
 #include "Onyx/Events/MouseEvent.h"
 // Vendor
+#include "glad/glad.h"
+#include "GLFW/glfw3.h"
 
 namespace Onyx
 {
@@ -54,6 +56,10 @@ namespace Onyx
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		ONYX_CORE_ASSERT(status, "Failed to initialize glad");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

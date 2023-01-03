@@ -42,6 +42,7 @@ namespace Onyx
 #define ONYX_CORE_WARNING(...)
 #define ONYX_CORE_INFO(...)
 #define ONYX_CORE_ASSERT(x, ...)
+#define ONYX_CORE_TRACE(...)
 
 #define ONYX_FATAL(...)
 #define ONYX_ERROR(...)
