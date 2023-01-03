@@ -7,12 +7,6 @@
     <Filter Include="Onyx\Events">
       <UniqueIdentifier>{F7F1B268-63A7-2B5E-EC9B-253558502262}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Onyx\Platform">
-      <UniqueIdentifier>{2753557D-9313-D1B3-5C4E-1A31C8CD1590}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Onyx\Platform\Windows">
-      <UniqueIdentifier>{6134FB9F-CDA0-B69A-9694-4EF802C0D802}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Onyx.h" />
@@ -37,39 +31,25 @@
     <ClInclude Include="src\Onyx\Events\MouseEvent.h">
       <Filter>Onyx\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Onyx\Layer.h">
-      <Filter>Onyx</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Onyx\LayerStack.h">
-      <Filter>Onyx</Filter>
-    </ClInclude>
     <ClInclude Include="src\Onyx\Log.h">
       <Filter>Onyx</Filter>
     </ClInclude>
-    <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h">
-      <Filter>Onyx\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Onyx\Window.h">
-      <Filter>Onyx</Filter>
-    </ClInclude>
     <ClInclude Include="src\OnyxPch.h" />
+    <ClInclude Include="src\Onyx\Window.h" />
+    <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h" />
+    <ClInclude Include="src\Onyx\Layer.h" />
+    <ClInclude Include="src\Onyx\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
       <Filter>Onyx</Filter>
     </ClCompile>
-    <ClCompile Include="src\Onyx\Layer.cpp">
-      <Filter>Onyx</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Onyx\LayerStack.cpp">
-      <Filter>Onyx</Filter>
-    </ClCompile>
     <ClCompile Include="src\Onyx\Log.cpp">
       <Filter>Onyx</Filter>
     </ClCompile>
-    <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp">
-      <Filter>Onyx\Platform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\OnyxPch.cpp" />
+    <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp" />
+    <ClCompile Include="src\Onyx\LayerStack.cpp" />
+    <ClCompile Include="src\Onyx\Layer.cpp" />
   </ItemGroup>
 </Project>
