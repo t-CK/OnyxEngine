@@ -17,7 +17,7 @@ namespace Onyx
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseMoveEvent X: " << m_MouseX << "Mouse Y:" << m_MouseY;
+			ss << "MouseMoveEvent X: " << m_MouseX << ", Mouse Y: " << m_MouseY;
 			return ss.str();
 		}
 

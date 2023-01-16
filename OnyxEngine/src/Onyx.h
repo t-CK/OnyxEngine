@@ -4,6 +4,7 @@
 
 #include "Onyx/Layer.h"
 #include "Onyx/Application.h"
+#include "Onyx/ImGui/ImGuiLayer.h"
 
 /////////// ENTRY POINT ///////////
 #include "Onyx/EntryPoint.h"

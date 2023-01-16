@@ -13,7 +13,7 @@ namespace Onyx
 
 	Application::Application()
 	{
-		ONYX_CORE_ASSERT(s_Application, "Application allready exists");
+		ONYX_CORE_ASSERT(!s_Application, "Application allready exists");
 		s_Application = this;
 
 		m_AppWindow = std::unique_ptr<Window>(Window::Create());

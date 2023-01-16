@@ -21,7 +21,7 @@ public:
 	SandboxApp()
 	{
 		PushLayer(new TestLayer);
-		PushOverlay(new TestLayer);
+		PushOverlay(new Onyx::ImGuiLayer());
 	}
 
 	~SandboxApp()

@@ -27,6 +27,7 @@ namespace Onyx
 		bool OnWindowClosed(WindowCloseEvent);
 
 		static inline Application* Get() { return s_Application; }
+		inline Window& GetWindow() { return *m_AppWindow; }
 
 		virtual ~Application();
 

@@ -166,6 +166,7 @@
     <ClInclude Include="src\Onyx\Events\Event.h" />
     <ClInclude Include="src\Onyx\Events\KeyEvent.h" />
     <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
+    <ClInclude Include="src\Onyx\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Onyx\Layer.h" />
     <ClInclude Include="src\Onyx\LayerStack.h" />
     <ClInclude Include="src\Onyx\Log.h" />
@@ -175,6 +176,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp" />
+    <ClCompile Include="src\Onyx\ImGui\generic .cpp" />
+    <ClCompile Include="src\Onyx\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Onyx\Layer.cpp" />
     <ClCompile Include="src\Onyx\LayerStack.cpp" />
     <ClCompile Include="src\Onyx\Log.cpp" />

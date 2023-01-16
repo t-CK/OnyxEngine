@@ -7,6 +7,9 @@
     <Filter Include="Onyx\Events">
       <UniqueIdentifier>{F7F1B268-63A7-2B5E-EC9B-253558502262}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Onyx\ImGui">
+      <UniqueIdentifier>{DDC4DBB5-C97C-1D03-3284-F65E1E5BB8F3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Onyx\Platform">
       <UniqueIdentifier>{2753557D-9313-D1B3-5C4E-1A31C8CD1590}</UniqueIdentifier>
     </Filter>
@@ -37,6 +40,9 @@
     <ClInclude Include="src\Onyx\Events\MouseEvent.h">
       <Filter>Onyx\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Onyx\ImGui\ImGuiLayer.h">
+      <Filter>Onyx\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Onyx\Layer.h">
       <Filter>Onyx</Filter>
     </ClInclude>
@@ -57,6 +63,9 @@
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
       <Filter>Onyx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Onyx\ImGui\ImGuiLayer.cpp">
+      <Filter>Onyx\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Onyx\Layer.cpp">
       <Filter>Onyx</Filter>
