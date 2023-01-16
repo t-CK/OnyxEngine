@@ -35,6 +35,9 @@ namespace Onyx
 		MouseScrolledEvent(float offsetX, float offsetY) :
 			m_OffsetX(offsetX), m_OffsetY(offsetY) { }
 
+		float GetOffsetX() { return m_OffsetX; }
+		float GetOffsetY() { return m_OffsetY; }
+
 		EVENT_CLASS_TYPE(MouseScrolled)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
