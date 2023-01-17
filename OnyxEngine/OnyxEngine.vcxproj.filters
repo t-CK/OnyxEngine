@@ -59,6 +59,7 @@
       <Filter>Onyx</Filter>
     </ClInclude>
     <ClInclude Include="src\OnyxPch.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
@@ -80,5 +81,6 @@
       <Filter>Onyx\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\OnyxPch.cpp" />
+    <ClCompile Include="src\Onyx\ImGui\generic .cpp" />
   </ItemGroup>
 </Project>

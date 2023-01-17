@@ -173,6 +173,7 @@
     <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h" />
     <ClInclude Include="src\Onyx\Window.h" />
     <ClInclude Include="src\OnyxPch.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp" />
