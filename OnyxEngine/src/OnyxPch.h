@@ -15,6 +15,7 @@
 // Onyx Engine
 #include "Onyx/Log.h"
 #include "Onyx/Core.h"
+#include "Onyx/Math/Vector.h"
 
 // Windows only
 #ifdef ONYX_PLATFORM_WINDOWS
