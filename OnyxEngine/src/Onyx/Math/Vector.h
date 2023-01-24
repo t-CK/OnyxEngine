@@ -21,7 +21,30 @@ namespace Onyx
 		inline float Length() { return sqrt((*this) * (*this)); }
 
 		inline Vector Normalize(float value) { return (*this) / Length(); }
+        
+		Vector CrossProduct(Vector& v2);
 
 		float X, Y, Z;
+	};
+
+	// A unit matrix containing location, rotation and scale values
+	struct ONYX_API Matrix
+	{
+	public:
+		Matrix(Vector& location, Rotator& rotation, Vector& scale) :
+			m_Location(location), m_Rotation(rotation), m_Scale(scale) { }
+
+		
+		Vector m_Location;
+		Rotator& m_Rotation;
+		Vector m_Scale;
+	};
+
+	struct ONYX_API Rotator
+	{
+		Rotator(float p, float y, float r) :
+		    pitch(p), yaw(y), roll(r) { }
+
+		float pitch, yaw, roll;
 	};
 }
