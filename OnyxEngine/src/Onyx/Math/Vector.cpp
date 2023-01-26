@@ -7,7 +7,7 @@ namespace Onyx
 	{
 		float x, y, z;
 
-		x = (Y * v2.Z) - (X * v2.Y);
+		x = (Y * v2.Z) - (Z * v2.Y);
 		y = (X * v2.Z) - (Z * v2.X);
 		z = (X * v2.Y) - (Y * v2.X);
 
