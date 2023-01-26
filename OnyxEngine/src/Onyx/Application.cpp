@@ -3,6 +3,7 @@
 // Onyx engine
 #include "Application.h"
 #include "Platform/Windows/WindowsWindowGL.h"
+#include "Input.h"
 // Vendor
 #include <glad/glad.h>
 
@@ -71,6 +72,9 @@ namespace Onyx
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			auto [x, y] = Input::GetMousePos();
+			ONYX_CORE_TRACE("{0}, {1}", x, y);
 
 			m_AppWindow->OnUpdate();
 		}

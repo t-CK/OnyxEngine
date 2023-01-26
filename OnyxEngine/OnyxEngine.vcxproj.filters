@@ -60,6 +60,8 @@
     </ClInclude>
     <ClInclude Include="src\OnyxPch.h" />
     <ClInclude Include="src\Onyx\Math\Vector.h" />
+    <ClInclude Include="src\Onyx\Input.h" />
+    <ClInclude Include="src\Onyx\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Onyx\Application.cpp">
@@ -83,5 +85,6 @@
     <ClCompile Include="src\OnyxPch.cpp" />
     <ClCompile Include="src\Onyx\ImGui\generic .cpp" />
     <ClCompile Include="src\Onyx\Math\Vector.cpp" />
+    <ClCompile Include="src\Onyx\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

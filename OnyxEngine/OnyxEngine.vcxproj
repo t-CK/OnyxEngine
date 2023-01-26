@@ -167,10 +167,12 @@
     <ClInclude Include="src\Onyx\Events\KeyEvent.h" />
     <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
     <ClInclude Include="src\Onyx\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Onyx\Input.h" />
     <ClInclude Include="src\Onyx\Layer.h" />
     <ClInclude Include="src\Onyx\LayerStack.h" />
     <ClInclude Include="src\Onyx\Log.h" />
     <ClInclude Include="src\Onyx\Math\Vector.h" />
+    <ClInclude Include="src\Onyx\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Onyx\Platform\Windows\WindowsWindowGL.h" />
     <ClInclude Include="src\Onyx\Window.h" />
     <ClInclude Include="src\OnyxPch.h" />
@@ -183,6 +185,7 @@
     <ClCompile Include="src\Onyx\LayerStack.cpp" />
     <ClCompile Include="src\Onyx\Log.cpp" />
     <ClCompile Include="src\Onyx\Math\Vector.cpp" />
+    <ClCompile Include="src\Onyx\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Onyx\Platform\Windows\WindowsWindowGL.cpp" />
     <ClCompile Include="src\OnyxPch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
