@@ -27,6 +27,14 @@ namespace Onyx
 		float X, Y, Z;
 	};
 
+	struct ONYX_API Rotator
+	{
+		Rotator(float p, float y, float r) :
+		    pitch(p), yaw(y), roll(r) { }
+
+		float pitch, yaw, roll;
+	};
+
 	// A unit matrix containing location, rotation and scale values
 	struct ONYX_API Matrix
 	{
@@ -38,13 +46,5 @@ namespace Onyx
 		Vector m_Location;
 		Rotator& m_Rotation;
 		Vector m_Scale;
-	};
-
-	struct ONYX_API Rotator
-	{
-		Rotator(float p, float y, float r) :
-		    pitch(p), yaw(y), roll(r) { }
-
-		float pitch, yaw, roll;
 	};
 }
