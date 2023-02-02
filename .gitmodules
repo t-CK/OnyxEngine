@@ -1,6 +1,0 @@
-[submodule "OnyxEngine/vendor/glfw"]
-	path = OnyxEngine/vendor/glfw
-	url = https://github.com/t-CK/glfw
-[submodule "OnyxEngine/vendor/ImGui"]
-	path = OnyxEngine/vendor/ImGui
-	url = https://github.com/t-CK/imgui

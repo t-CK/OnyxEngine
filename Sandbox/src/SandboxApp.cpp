@@ -7,7 +7,12 @@ public:
 	TestLayer() :
 		Layer("TestLayer") { }
 
-	void OnUpdate() override { ONYX_INFO("TestLayer Update"); }
+	void OnUpdate() override 
+	{ 
+		ONYX_INFO("TestLayer Update");
+		if (Onyx::Input::IsKeyPressed(ONYX_KEY_TAB))
+			ONYX_TRACE("Tab is pressed");
+	}
 
 	void OnEvent(Onyx::Event& event) override { }
 

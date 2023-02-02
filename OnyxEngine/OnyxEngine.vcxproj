@@ -168,6 +168,8 @@
     <ClInclude Include="src\Onyx\Events\MouseEvent.h" />
     <ClInclude Include="src\Onyx\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Onyx\Input.h" />
+    <ClInclude Include="src\Onyx\keycodes\KeyCodes.h" />
+    <ClInclude Include="src\Onyx\keycodes\MouseButtonCodes.h" />
     <ClInclude Include="src\Onyx\Layer.h" />
     <ClInclude Include="src\Onyx\LayerStack.h" />
     <ClInclude Include="src\Onyx\Log.h" />

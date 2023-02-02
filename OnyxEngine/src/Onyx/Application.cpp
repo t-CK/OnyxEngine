@@ -70,12 +70,9 @@ namespace Onyx
 			glClearColor(1, 0, 1, 0);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			// Update
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-
-			auto [x, y] = Input::GetMousePos();
-			ONYX_CORE_TRACE("{0}, {1}", x, y);
-
 			m_AppWindow->OnUpdate();
 		}
 	}
